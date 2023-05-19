@@ -63,6 +63,7 @@ function Build-CoverageReport
             -mdFile $script:coverage_report_path -xslParams @{
                 reportTitle = $script:coverage_report_title
             }
+        Write-Host "Coverage Report Path: $script:coverage_report_path"
 
         & "$PSScriptRoot/jacoco-report/embedmissedlines.ps1" -mdFile $script:coverage_report_path
 
